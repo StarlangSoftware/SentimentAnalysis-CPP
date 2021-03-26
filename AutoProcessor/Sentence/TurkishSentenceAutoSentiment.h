@@ -9,8 +9,6 @@
 using namespace std;
 
 class TurkishSentenceAutoSentiment : public SentenceAutoSentiment {
-private:
-    static string transform(const string& name);
 protected:
     PolarityType getPolarity(PolarityType polarityType, AnnotatedSentence* sentence, int index) override;
 public:
