@@ -22,7 +22,7 @@ PolarityType SentenceAutoSentiment::findPolarityType(double sum) {
 PolarityType SentenceAutoSentiment::autoSentiment(AnnotatedSentence *sentence) {
     double polarityValue = 0.0;
     for (int i = 0; i < sentence->wordCount(); i++) {
-        auto* word = dynamic_cast<AnnotatedWord*>(sentence->getWord(i));
+        auto* word = (AnnotatedWord*) sentence->getWord(i);
         SentiSynSet* sentiSynSet = sentiNet->getSentiSynSet(word->getSemantic());
         if (sentiSynSet != nullptr) {
             double value = max(sentiSynSet->getNegativeScore(), sentiSynSet->getPositiveScore());
