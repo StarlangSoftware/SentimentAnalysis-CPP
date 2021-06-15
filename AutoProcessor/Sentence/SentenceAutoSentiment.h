@@ -10,15 +10,12 @@
 using namespace std;
 
 class SentenceAutoSentiment {
-private:
-    static PolarityType findPolarityType(double sum);
 protected:
     SentiNet* sentiNet{};
-virtual PolarityType getPolarity(PolarityType polarityType, AnnotatedSentence* sentence, int index) = 0;
 public:
     SentenceAutoSentiment();
     explicit SentenceAutoSentiment(SentiNet *_sentiNet);
-    PolarityType autoSentiment(AnnotatedSentence* sentence);
+    virtual PolarityType autoSentiment(AnnotatedSentence* sentence) = 0;
 };
 
 #endif //SENTIMENTANALYSIS_SENTENCEAUTOSENTIMENT_H
