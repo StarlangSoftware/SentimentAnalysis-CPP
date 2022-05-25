@@ -1,9 +1,10 @@
 cmake_minimum_required(VERSION 3.17)
 project(SentimentAnalysis)
-set(CMAKE_CXX_STANDARD 17)
+
+set(CMAKE_CXX_STANDARD 20)
+
 include_directories(include)
 link_directories(library)
+
 add_library(SentimentAnalysis AutoProcessor/Sentence/SentenceAutoSentiment.cpp AutoProcessor/Sentence/SentenceAutoSentiment.h AutoProcessor/Sentence/TurkishSentenceBasicAutoSentiment.cpp AutoProcessor/Sentence/TurkishSentenceBasicAutoSentiment.h)
-add_executable(Main Main.cpp AutoProcessor/Sentence/SentenceAutoSentiment.cpp AutoProcessor/Sentence/SentenceAutoSentiment.h AutoProcessor/Sentence/TurkishSentenceBasicAutoSentiment.cpp AutoProcessor/Sentence/TurkishSentenceBasicAutoSentiment.h)
 target_link_libraries(SentimentAnalysis AnnotatedSentence Corpus DependencyParser Dictionary FrameNet MorphologicalAnalysis MorphologicalDisambiguation NamedEntityRecognition PropBank SentiNet WordNet XmlParser)
-target_link_libraries(Main AnnotatedSentence Corpus DependencyParser Dictionary FrameNet MorphologicalAnalysis MorphologicalDisambiguation NamedEntityRecognition PropBank SentiNet WordNet XmlParser)
