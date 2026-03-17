@@ -2,6 +2,10 @@ Simple Web Interface
 ============
 [Link 1](http://104.247.163.162/nlptoolkit/turkish-sentiment-analysis.html) [Link 2](https://starlangsoftware.github.io/nlptoolkit-web-simple/turkish-sentiment-analysis.html)
 
+Annotated Datasets
+============
+[Tourism](http://104.247.163.162/nlptoolkit/turkish-polarity1.html)
+
 For Developers
 ============
 You can also see [Java](https://github.com/StarlangSoftware/SentimentAnalysis) or [C#](https://github.com/StarlangSoftware/SentimentAnalysis-CS) repository.
